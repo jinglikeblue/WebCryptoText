@@ -18,4 +18,4 @@
 
 ### 使用链接
 
-https://jinglikeblue.github.io/WebCryptoText/codes/crypto.html
+[https://jinglikeblue.github.io/WebCryptoText](https://jinglikeblue.github.io/WebCryptoText)
