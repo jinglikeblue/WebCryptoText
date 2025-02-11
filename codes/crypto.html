@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>加密文本_0.0.8</title>
+    <title>加密文本_0.0.9</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <style>
         body {
@@ -91,6 +91,7 @@
         </div>
 
         <div class="section_btn">
+            <button onclick="pasteInput()">粘贴到输入</button>
             <button onclick="encryptText()">加密</button>
             <button onclick="decryptText()">解密</button>
             <button onclick="copyOutput()">复制输出内容</button>
@@ -103,6 +104,18 @@
     </div>
 
     <script>
+
+        function pasteInput() {
+            const textarea = document.getElementById('inputText');
+
+            // 使用 Clipboard API 读取剪贴板内容
+            navigator.clipboard.readText().then(function (text) {
+                // 将剪贴板的文本写入到 textarea 中
+                textarea.value = text;
+            }).catch(function (err) {
+                alert('无法读取剪贴板内容: ' + err);
+            });
+        }
 
         function copyOutput() {
             const textarea = document.getElementById('outputText');
