@@ -3,36 +3,58 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>AES加密解密工具_0.0.2</title>
+    <title>AES加密解密工具_0.0.3</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
-            /* max-width: 800px; */
-            margin: 20px auto;
-            padding: 20px;
+            margin: 10;
+            padding: 10;
         }
 
         .container {
-            display: grid;
-            grid-gap: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 98vh;
+            gap: 10px;
+            padding-left: 20px;            
+            padding-right: 20px;            
+        }
+
+        .section_key {
+            /* border: 1px solid #ccc; */       
+            border-radius: 8px;
+            flex-grow: 0.1;
+        }
+
+        .section_btn {
+            /* border: 1px solid #ccc; */
+            /* padding-left: 20px;   
+            padding-right: 20px;                      */
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: 100px;
         }
 
         .section {
-            border: 1px solid #ccc;
-            padding: 20px;
+            /* border: 1px solid #ccc; */
+            /* padding-left: 20px;            
+            padding-right: 20px; */
             border-radius: 8px;
+            flex-grow: 1;            
         }
 
         textarea,
         input[type="password"] {
             width: 100%;
-            margin: 10px 0;
-            padding: 8px;
+            height: 100%;
+            /* margin: 10px 0; */
+            /* padding: 8px; */
         }
 
         textarea {
-            height: 100px;
+            /* flex-grow: 1; */
+            /* height: 100%; */
         }
 
         button {
@@ -43,6 +65,7 @@
             border-radius: 4px;
             cursor: pointer;
             width: 40%;
+            height: 100%;
         }
 
         button:hover {
@@ -117,16 +140,23 @@
 <body>
     <div class="container">
 
-        <div class="section">
+        <div class="section_key">
             <input type="password" id="key" placeholder="输入加密密钥">
         </div>
 
         <div class="section">
             <textarea id="inputText" placeholder="输入"></textarea>
+        </div>
+
+        <div class="section_btn">
             <button onclick="encryptText()">加密</button>
             <button onclick="decryptText()">解密</button>
+        </div>
+
+        <div class="section">
             <textarea id="outputText" placeholder="输出"></textarea>
         </div>
+
     </div>
 
     <script>
