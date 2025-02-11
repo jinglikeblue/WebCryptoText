@@ -15,3 +15,7 @@
 ### 解密功能
 
 将输入的Base64字符串，转换为解密后的文本
+
+### 使用链接
+
+https://jinglikeblue.github.io/WebCryptoText/codes/crypto.html
